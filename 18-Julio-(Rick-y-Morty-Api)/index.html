@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Public/Css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Episodios</title>
+</head>
+<body>
+    <h2>EPISODIOS</h2>
+    <select name="pagina" id="pagina" onchange="apiEp(this.value)">
+        <script>
+                for(let i=1;i<=42;i++){
+                    document.write(`<option value=${i}>${i}</option>`);
+                }
+        </script>
+    </select>
+    <section id="Resultado">
+
+    </section>
+    <h2>Aqui van los guardados</h2>
+    <button class="btn" id="mostrarItemsBtn">Mostrar</button>
+    <button  class="btn btnLimpiarLocal" id="limpiarStorageBtn">Limpiar localstorage</button>
+    <button  class="btn btnLimpiar" id="limpiarBtn">Limpiar </button>
+    <div id="itemsGuardados">
+
+    </div>
+    <script src="Public/Js/index.js" ></script>
+</body>
+</html>
