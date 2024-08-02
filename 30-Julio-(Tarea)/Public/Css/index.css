@@ -60,7 +60,8 @@ button.btn {
 }
 
 button.btn:hover {
-    background-color: darken(var(--accent-color), 10%);
+    background-color: lightblue;
+    color: #333333;
 }
 
 .card, .cardLocal {
