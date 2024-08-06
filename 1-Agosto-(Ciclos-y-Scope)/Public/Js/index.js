@@ -1,4 +1,3 @@
-// scripts.js
 document.addEventListener('DOMContentLoaded', () => {
     const inputFruta = document.getElementById('inputfruta');
     const addFrutaBtn = document.getElementById('addFrutaBtn');
