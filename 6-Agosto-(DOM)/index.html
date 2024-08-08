@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAREA</title>
+    <link rel="shortcut icon" href="Public/Img/imagen2.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="Public/Css/index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TAREA</h1>
+        <button id="clickCounterBtn">Contador de Clics: <span id="clickCounter">0</span></button>
+        
+        <div class="todo-section">
+            <h2>Lista de Tareas</h2>
+            <input type="text" id="newTask" placeholder="Nueva tarea">
+            <button id="addTaskBtn">Agregar Tarea</button>
+            <ul id="taskList"></ul>
+        </div>
+
+        <p id="hoverParagraph">Pasa el ratón por aquí para cambiar el estilo.</p>
+
+        <div class="timer-section">
+            <h2>Temporizador</h2>
+            <div id="timerWheel" class="timer-wheel">
+                <div id="timerDisplay" class="timer-display">60</div>
+            </div>
+            <input type="number" id="timeInput" placeholder="Segundos" min="1" value="60">
+            <button id="startTimerBtn">Iniciar</button>
+            <button id="pauseTimerBtn">Pausar</button>
+            <button id="resetTimerBtn">Reiniciar</button>
+        </div>
+
+        <div class="image-section">
+            <h2>Cambiar Imagen</h2>
+            <img id="toggleImage" src="Public/Img/imagen2.jpg" alt="Imagen">
+        </div>
+    </div>
+    <script src="Public/Js/index.js"></script>
+</body>
+</html>
