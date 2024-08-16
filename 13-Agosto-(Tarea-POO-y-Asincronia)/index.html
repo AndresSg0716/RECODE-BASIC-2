@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="Public/Css/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">LISTA DE TAREAS</h1>
+      <form id="taskForm">
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="Barrer la cocina..."
+          required
+        />
+        <button type="submit" class="btn">Añadir Tarea</button>
+      </form>
+      <ul id="taskList" class="task-list"></ul>
+    </div>
+    <script src="Public/Js/index.js"></script>
+  </body>
+</html>
