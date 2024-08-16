@@ -32,6 +32,14 @@ class TaskList {
     this.saveToLocalStorage();
   }
 
+  editTaskName(id, newName) {
+    const task = this.tasks.find((task) => task.id === id);
+    if (task) {
+      task.editTask(newName); // Aquí se utiliza la función editTask ya existente.
+      this.saveToLocalStorage();
+    }
+  }
+
   toggleTaskCompletion(id) {
     const task = this.tasks.find((task) => task.id === id);
     if (task) {
@@ -78,14 +86,20 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   taskListElement.addEventListener("click", (event) => {
+    const taskId = parseInt(event.target.closest(".task-item").dataset.id);
+
     if (event.target.classList.contains("complete-btn")) {
-      const taskId = parseInt(event.target.closest(".task-item").dataset.id);
       taskList.toggleTaskCompletion(taskId);
       displayTasks();
     } else if (event.target.classList.contains("delete-btn")) {
-      const taskId = parseInt(event.target.closest(".task-item").dataset.id);
       taskList.deleteTask(taskId);
       displayTasks();
+    } else if (event.target.classList.contains("edit-btn")) {
+      const newName = prompt("Ingrese el nuevo nombre de la tarea:");
+      if (newName) {
+        taskList.editTaskName(taskId, newName); // Aquí se llama a la función que utiliza `editTask`.
+        displayTasks();
+      }
     }
   });
 
@@ -97,12 +111,13 @@ document.addEventListener("DOMContentLoaded", async () => {
       taskItem.dataset.id = task.id;
 
       taskItem.innerHTML = `
-                  <span class="task-name">${task.name}</span>
-                  <button class="action-btn complete-btn">${
-                    task.completed ? "Incompleta" : "Completada"
-                  }</button>
-                  <button class="action-btn delete-btn">Eliminar</button>
-              `;
+                    <span class="task-name">${task.name}</span>
+                    <button class="action-btn complete-btn">${
+                      task.completed ? "Incompleta" : "Completada"
+                    }</button>
+                    <button class="action-btn edit-btn">Editar</button>
+                    <button class="action-btn delete-btn">Eliminar</button>
+                `;
 
       taskListElement.appendChild(taskItem);
     });
