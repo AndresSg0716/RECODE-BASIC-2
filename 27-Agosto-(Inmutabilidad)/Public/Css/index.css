@@ -1,0 +1,144 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 20px;
+  color: #555;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  color: #4a90e2;
+  font-weight: 300;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form button {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+form input {
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+form button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form button:hover {
+  background-color: #357abd;
+  transform: translateY(-2px);
+}
+
+form button:active {
+  transform: translateY(0);
+}
+
+#animal-list {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.animal-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.animal-card.adoptado .animal-info {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.animal-info {
+  font-size: 18px;
+  color: #333;
+}
+
+.adoptado-estado {
+  font-weight: bold;
+  color: #e94e77;
+}
+
+#resultados {
+  display: flex;
+  justify-content: space-around;
+  max-width: 600px;
+  margin: 20px auto;
+  gap: 10px;
+}
+
+#resultados button {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#resultados button:hover {
+  background-color: #357abd;
+  transform: translateY(-2px);
+}
+
+#resultados button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  form input {
+    max-width: 100%;
+  }
+
+  #resultados {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .animal-card {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

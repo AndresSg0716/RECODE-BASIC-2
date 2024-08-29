@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Gestión de Animales en un Refugio</title>
+    <link rel="stylesheet" href="Public/Css/index.css" />
+  </head>
+  <body>
+    <h1>Sistema de Gestión de Animales en un Refugio</h1>
+    <div id="animal-list"></div>
+
+    <form id="animal-form">
+      <input type="text" id="nombre" placeholder="Nombre del animal" required />
+      <input
+        type="text"
+        id="especie"
+        placeholder="Especie (perro, gato, etc.)"
+        required
+      />
+      <input type="number" id="edad" placeholder="Edad" required />
+      <button type="submit">Añadir Animal</button>
+    </form>
+
+    <div id="resultados">
+      <button id="filtrar-especie">Filtrar por Especie</button>
+      <button id="filtrar-adoptados">Filtrar Adoptados</button>
+      <button id="actualizar-edad">Actualizar Edad</button>
+      <button id="filtrar-edad">Filtrar por Edad</button>
+      <button id="contar-animales">Contar Animales</button>
+    </div>
+
+    <script src="Public/Js/index.js"></script>
+  </body>
+</html>
