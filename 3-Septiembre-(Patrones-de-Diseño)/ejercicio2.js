@@ -14,6 +14,11 @@ class NewsChannel {
     publishNews(news) {
         this.subscribers.forEach(subscriber => subscriber.update(news));
     }
+
+    eliminarUsuario(nombreUsuario) {
+        this.subscribers = this.subscribers.filter(subscriber => subscriber.name !== nombreUsuario);
+        console.log(`${nombreUsuario} ha sido eliminado.`);
+    }
 }
 
 class User {
@@ -30,12 +35,16 @@ const channel = new NewsChannel();
 
 const user1 = new User('Juan');
 const user2 = new User('usuario 2');
+const user3 = new User('Jfvwgwegwg');
+const user4 = new User('Apapapa');
 
 channel.subscribe(user1);
 channel.subscribe(user2);
+channel.subscribe(user3);
+channel.subscribe(user4);
 
 channel.publishNews('Nueva noticia');
 
-channel.unsubscribe(user2);
+channel.eliminarUsuario('Jfvwgwegwg');
 
 channel.publishNews('Otra noticia');
