@@ -152,10 +152,8 @@ document
   .getElementById("filtrar-adoptados")
   .addEventListener("click", function () {
     const animalesAdoptados = refugio.filtrarAdoptados();
-    console.log(animalesAdoptados);
     mostrarAnimales(animalesAdoptados);
   });
-
 document
   .getElementById("actualizar-edad")
   .addEventListener("click", function () {
