@@ -4,8 +4,6 @@ const archivo1 = new Archivo("archivo1.txt");
 const archivo2 = new Archivo("archivo2.txt");
 const archivo3 = new Archivo("archivo3.txt");
 const archivo5 = new Archivo("archivo5.txt");
-const archivo6 = new Archivo("archivo6.txt");
-const archivo7 = new Archivo("archivo7.txt");
 
 const carpeta1 = new Carpeta("carpeta1");
 const carpeta2 = new Carpeta("carpeta2");
@@ -15,8 +13,7 @@ carpeta1.agregarContenido(archivo1);
 carpeta2.agregarContenido(archivo2);
 carpeta2.agregarContenido(archivo3);
 carpeta2.agregarContenido(archivo5);
-carpeta2.agregarContenido(archivo6);
-carpeta2.agregarContenido(archivo7);
+
 carpetaRaiz.agregarContenido(carpeta1);
 carpetaRaiz.agregarContenido(carpeta2);
 
