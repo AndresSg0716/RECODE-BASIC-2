@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+#scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.team {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#events {
+    margin-top: 20px;
+    height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
