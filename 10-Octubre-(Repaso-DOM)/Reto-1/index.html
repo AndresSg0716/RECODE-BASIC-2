@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Dinámica</title>
     <link rel="stylesheet" href="index.css">
-    <title>RETO 1</title>
 </head>
 <body>
-    <button id="addDiv">Generar DIV</button>
+    <div class="container">
+        <h1>Lista Dinámica</h1>
+        <input type="text" id="item-input" placeholder="Agrega un nuevo elemento">
+        <button id="add-item">Agregar a la Lista</button>
+
+        <ul id="dynamic-list"></ul>
+
+        <button id="generate-list">Generar Lista Final</button>
+        <div id="final-list"></div>
+    </div>
+
     <script src="index.js"></script>
 </body>
 </html>
