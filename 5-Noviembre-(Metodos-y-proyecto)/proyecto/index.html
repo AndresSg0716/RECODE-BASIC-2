@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>CREADOR DE ENCUESTAS</title>
+  </head>
+  <body>
+    <h1>CREADOR DE ENCUESTAS</h1>
+    <section id="create-survey">
+      <h2>CREAR NUEVA ENCUESTA</h2>
+      <input
+        type="text"
+        id="survey-title"
+        placeholder="Título de la encuesta"
+      />
+      <div id="options">
+        <input type="text" placeholder="Opción 1" />
+        <input type="text" placeholder="Opción 2" />
+      </div>
+      <div id="button-optios">
+        <button id="add-option">Agregar Opción</button>
+        <button id="save-survey">Guardar Encuesta</button>
+      </div>
+    </section>
+    <section id="vote">
+      <h2 id="vote-surveys">VOTAR EN LAS ENCUESTAS CREADAS</h2>
+      <div id="survey-list"></div>
+    </section>
+    <section id="results">
+      <h2>RESULTADOS DE LAS ENCUESTAS CREADAS</h2>
+      <div id="results-chart"></div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
